@@ -44,12 +44,15 @@ h1 {
 .mem_image {
   display: block;
   height: 0;
-  max-width: 90%;
   visibility: hidden;
   cursor: pointer;
   text-align: center;
   opacity: 0;
   margin: 0 auto;
+}
+
+.mem_image img {
+  width: 100%;
 }
 
 .mem_input {
