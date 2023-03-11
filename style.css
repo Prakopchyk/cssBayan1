@@ -4,43 +4,47 @@
 
 body {
   color: black;
-  font: normal 0.6em/1.1 Montserrat, sans-serif;;
-  background: beige;
+  font: normal 0.6em/1.1 Montserrat, sans-serif;
+  background: #F6F6EC;
   padding: 0 0.5em 0.5em;
   height: 100vh;
   margin: 0;
 }
 
 h1 {
-  margin: 1em 0 0;
+  margin: 1em 0.5em 0;
   line-height: 1.2;
-  text-align: center;
+  text-align: left;
 }
- .mem {
-  /* width: 100%; */
-  margin: 0 auto;
- }
 
- .mem_item {
+.mem {
+  margin: 0 auto;
+}
+
+.mem_item {
   border-bottom: 0.1rem solid lightgrey;
   padding: 0.5em 0;
-  text-align: center;
- }
+}
 
 .mem_title {
   cursor: pointer;
 }
 
-.label_container{
+.label_container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 1em 1em;
 }
 
+.label_image {
+  margin-left: 1em;
+}
+
 .mem_image {
   display: block;
   height: 0;
+  max-width: 90%;
   visibility: hidden;
   cursor: pointer;
   text-align: center;
@@ -55,124 +59,85 @@ h1 {
   height: 0;
 }
 
-.mem_input:checked ~ .mem_title .label_container .label_image {
+.mem_input:checked~.mem_title .label_container .label_image {
   transform-origin: center center;
   transform: rotate(45deg);
   transition: transform .3s;
-} 
+}
 
-.mem_input:checked ~.mem_image {
+.mem_input:checked~.mem_image {
   height: auto;
-  visibility:visible;
+  visibility: visible;
   opacity: 1;
   transition: opacity 1s linear;
 }
 
-@media only screen and (min-width: 400px)  {
+@media only screen and (min-width: 450px) {
 
-  body {
-    font: normal 0.7em/1.1 Montserrat, sans-serif;;
-  }
-
-  .mem_image {
-   max-width: 80%; 
-  }
-}
-
-@media only screen and (min-width: 500px)  {
-  
   body {
     font: normal 0.8em/1.1 Montserrat, sans-serif;
-    padding: 0 1em 0.5em;
   }
 
   .mem_image {
-   max-width: 65%; 
+    max-width: 80%;
   }
 }
 
-@media only screen and (min-width: 600px)  {
-  
-  body {
-    font: normal 0.9em/1.1 Montserrat, sans-serif;
-    padding: 0 1em 0.5em;
-  }
+@media only screen and (min-width: 600px) {
 
-  .mem_image {
-   max-width: 60%; 
-  }
-}
-
-@media only screen and (min-width: 600px)  {
-  
   body {
     font: normal 1em/1.1 Montserrat, sans-serif;
     padding: 0 2em 0.5em;
   }
 
   .mem_image {
-   max-width: 55%; 
+    max-width: 55%;
   }
 }
 
-@media only screen and (min-width: 820px)  {
-  
-  body {
-    font: normal 1.2em/1.1 Montserrat, sans-serif;
-  }
+@media only screen and (min-width: 821px) {
 
-  .mem_image {
-   max-width: 50%; 
-  }
-}
-
-@media only screen and (min-width: 900px)  {
-  
-  body {
-    font: normal 1.5em/1.1 Montserrat, sans-serif;
-    padding: 0 2em 0.5em;
-  }
-
-  .mem_image {
-   max-width: 45%; 
-  }
-}
-
-@media only screen and (min-width: 821px)  {
-  
   body {
     font: bold 1.5em/1.1 Montserrat, sans-serif;
   }
 
   body .mem_title {
-    color: blue;
+    color: #397BDE;
   }
 
-  body .mem_title > .label_container > .label_image {
+  body .mem_title>.label_container>.label_image {
     visibility: hidden;
   }
 
-  body:hover .mem_title  {
+  body:hover .mem_title {
     color: black;
-  }  
+  }
 
-  body:hover .mem_title > .label_container > .label_image {
+  body:hover .mem_title>.label_container>.label_image {
     visibility: visible;
-  }  
+  }
+
+  h1 {
+    margin-left: calc(10% + 0.5em);
+  }
 
   .mem {
     margin: 0 10%;
-   }
+  }
 
-   .mem_item:hover > .mem_title > .label_container > .label_image {
+  .mem_image {
+    max-width: 45%;
+  }
+
+  .mem_item:hover>.mem_title>.label_container>.label_image {
     transform-origin: center center;
     transform: rotate(45deg);
     transition: transform .3s;
-  } 
+  }
 
-  .mem_item:hover > .mem_image {
+  .mem_item:hover>.mem_image {
     height: auto;
-    visibility:visible;
+    visibility: visible;
     opacity: 1;
     transition: opacity 1s linear;
   }
