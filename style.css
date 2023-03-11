@@ -17,7 +17,7 @@ h1 {
   text-align: center;
 }
  .mem {
-  width: 100%;
+  /* width: 100%; */
   margin: 0 auto;
  }
 
@@ -66,4 +66,114 @@ h1 {
   visibility:visible;
   opacity: 1;
   transition: opacity 1s linear;
+}
+
+@media only screen and (min-width: 400px)  {
+
+  body {
+    font: normal 0.7em/1.1 Montserrat, sans-serif;;
+  }
+
+  .mem_image {
+   max-width: 80%; 
+  }
+}
+
+@media only screen and (min-width: 500px)  {
+  
+  body {
+    font: normal 0.8em/1.1 Montserrat, sans-serif;
+    padding: 0 1em 0.5em;
+  }
+
+  .mem_image {
+   max-width: 65%; 
+  }
+}
+
+@media only screen and (min-width: 600px)  {
+  
+  body {
+    font: normal 0.9em/1.1 Montserrat, sans-serif;
+    padding: 0 1em 0.5em;
+  }
+
+  .mem_image {
+   max-width: 60%; 
+  }
+}
+
+@media only screen and (min-width: 600px)  {
+  
+  body {
+    font: normal 1em/1.1 Montserrat, sans-serif;
+    padding: 0 2em 0.5em;
+  }
+
+  .mem_image {
+   max-width: 55%; 
+  }
+}
+
+@media only screen and (min-width: 820px)  {
+  
+  body {
+    font: normal 1.2em/1.1 Montserrat, sans-serif;
+  }
+
+  .mem_image {
+   max-width: 50%; 
+  }
+}
+
+@media only screen and (min-width: 900px)  {
+  
+  body {
+    font: normal 1.5em/1.1 Montserrat, sans-serif;
+    padding: 0 2em 0.5em;
+  }
+
+  .mem_image {
+   max-width: 45%; 
+  }
+}
+
+@media only screen and (min-width: 821px)  {
+  
+  body {
+    font: bold 1.5em/1.1 Montserrat, sans-serif;
+  }
+
+  body .mem_title {
+    color: blue;
+  }
+
+  body .mem_title > .label_container > .label_image {
+    visibility: hidden;
+  }
+
+  body:hover .mem_title  {
+    color: black;
+  }  
+
+  body:hover .mem_title > .label_container > .label_image {
+    visibility: visible;
+  }  
+
+  .mem {
+    margin: 0 10%;
+   }
+
+   .mem_item:hover > .mem_title > .label_container > .label_image {
+    transform-origin: center center;
+    transform: rotate(45deg);
+    transition: transform .3s;
+  } 
+
+  .mem_item:hover > .mem_image {
+    height: auto;
+    visibility:visible;
+    opacity: 1;
+    transition: opacity 1s linear;
+  }
 }
