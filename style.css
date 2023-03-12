@@ -104,6 +104,21 @@ h1 {
     font: bold 1.5em/1.1 Montserrat, sans-serif;
   }
 
+  h1 {
+    margin-left: calc(10% + 0.5em);
+  }
+
+  .mem {
+    margin: 0 10%;
+  }
+
+  .mem_image {
+    max-width: 45%;
+  }
+}
+
+@media (hover: hover) {
+
   body .mem_title {
     color: #397BDE;
   }
@@ -118,18 +133,6 @@ h1 {
 
   body:hover .mem_title>.label_container>.label_image {
     visibility: visible;
-  }
-
-  h1 {
-    margin-left: calc(10% + 0.5em);
-  }
-
-  .mem {
-    margin: 0 10%;
-  }
-
-  .mem_image {
-    max-width: 45%;
   }
 
   .mem_item:hover>.mem_title>.label_container>.label_image {
