@@ -6,24 +6,25 @@ body {
   color: black;
   font: normal 0.6em/1.1 Montserrat, sans-serif;
   background: #F6F6EC;
-  padding: 0 0.5em 0.5em;
   height: 100vh;
+  text-align: center;
   margin: 0;
 }
 
+.main {
+  display: inline-block;
+  background: #F6F6EC;
+  padding: 0 1em;
+  margin: 0 auto;
+}
+
 h1 {
-  margin: 1em 0.5em 0;
   line-height: 1.2;
   text-align: left;
 }
 
-.mem {
-  margin: 0 auto;
-}
-
 .mem_item {
   border-bottom: 0.1rem solid lightgrey;
-  padding: 0.5em 0;
 }
 
 .mem_title {
@@ -34,7 +35,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1em 1em;
+  padding: 0 0 1em;
 }
 
 .label_image {
@@ -90,6 +91,9 @@ h1 {
 
   body {
     font: normal 1em/1.1 Montserrat, sans-serif;
+  }
+
+  .main {
     padding: 0 2em 0.5em;
   }
 
@@ -104,14 +108,6 @@ h1 {
     font: bold 1.5em/1.1 Montserrat, sans-serif;
   }
 
-  h1 {
-    margin-left: calc(10% + 0.5em);
-  }
-
-  .mem {
-    margin: 0 10%;
-  }
-
   .mem_image {
     max-width: 45%;
   }
@@ -119,19 +115,19 @@ h1 {
 
 @media (hover: hover) {
 
-  body .mem_title {
+  .main .mem_title {
     color: #397BDE;
   }
 
-  body .mem_title>.label_container>.label_image {
+  .main .mem_title>.label_container>.label_image {
     visibility: hidden;
   }
 
-  body:hover .mem_title {
+  .main:hover .mem_title {
     color: black;
   }
 
-  body:hover .mem_title>.label_container>.label_image {
+  .main:hover .mem_title>.label_container>.label_image {
     visibility: visible;
   }
 
